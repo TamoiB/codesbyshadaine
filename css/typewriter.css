@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+@import url('global.css');
+body{
+  font-family: 'Play', sans-serif;
+  height: 100vh;
+  background: url('https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') no-repeat center center/cover;
+  color: white;
+  overflow: hidden;
+}
+.navbar, .navbar-mobile{
+  background: transparent;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 0 3rem;
+}
+h1, h2{
+  font-weight: 200;
+  margin: 0.4rem;
+
+}
+h1{
+  font-size: 3.5rem;
+}
+h2{
+font-size: 2rem;
+}
+.txt-type > .txt{
+  border-right:0.2rem solid white;
+}
+@media (min-width:1200px) {
+  h1{
+    font-size: 5rem;
+  }
+}
+@media (max-width:800px) {
+  h1{
+    font-size: 3rem;
+  }
+  .container{
+    padding: 0 1rem;
+  }
+  @media (max-width:500px) {
+    h1{
+      font-size: 2.5rem;
+      text-align: center;
+    }
+    h2{
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  }
+}
+@media (max-width:350px) {
+  h1{
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  h2{
+    text-align: center;
+    font-size: 1rem;
+  }
+}

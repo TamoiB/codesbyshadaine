@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+@import url('global.css');
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Quicksand', sans-serif;
+  background: #324;
+  color: white;
+  line-height: 1.6;
+}
+.slider{
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+.slide{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+.current{
+  opacity: 1;
+}
+.slide .content{
+  position: absolute;
+  bottom: 70px;
+  left: -700px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding:25px;
+  opacity: 0;
+  width: 600px;
+}
+.slide.current .content{
+  opacity: 1;
+  transition: ease-in-out;
+  transition-duration: 0.7s;
+  transition-delay: 0.3;
+  transform: translateX(700px);
+}
+
+button#next{
+position: absolute;
+top: 50%;
+right: 15px;
+}
+button#prev{
+position: absolute;
+top: 50%;
+left: 15px;
+}
+.buttons button{
+  border: 2px solid white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  color: white;
+  background: transparent;
+}
+.slide:first-child{
+  background: url(/images/image-slider-images/bg-image1.jpeg) no-repeat center center/cover;
+  transition: .8s ease-in all;
+}
+.slide:nth-child(2){
+  background: url(/images/image-slider-images/bg-image2.jpeg) no-repeat center top/cover;
+  transition: .8s ease-in all;
+}
+.slide:nth-child(3){
+  background: url(/images/image-slider-images/bg-image3.jpeg) no-repeat center top/cover;
+  transition: .8s ease-in all;
+}
+.slide:nth-child(4){
+  transition: .8s ease-in all;
+  background: url(/images/image-slider-images/bg-image4.jpeg) no-repeat center top/cover;
+}
+.slide:nth-child(5){
+  transition: .8s ease-in all;
+  background: url(/images/image-slider-images/bg-image5.jpeg) no-repeat center top/cover;
+}
+.slide:nth-child(6){
+  transition: .8s ease-in all;
+  background: url(/images/image-slider-images/bg-image6.jpeg) no-repeat center top/cover;
+}
+.slide:nth-child(7){
+  transition: .8s ease-in all;
+  background: url(/images/image-slider-images/bg-image7.jpg) no-repeat center top/cover;
+}
+@media (max-width:700px) {
+  
+  .slide .content{
+    width: 60%;
+    bottom: 50px;
+    padding: 15px;
+  }
+}
