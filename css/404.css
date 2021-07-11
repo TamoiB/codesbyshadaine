@@ -1,0 +1,29 @@
+@import url("global.css");
+@import url("files.css");
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: var(--beige);
+}
+.title {
+	font-size: 2rem;
+	font-weight: 500;
+	margin-bottom: 30px;
+	font-family: var(--lora-font);
+	text-align: center;
+}
+.lead {
+	font-size: 1.15rem;
+	font-family: var(--mont-font);
+	text-align: center;
+	margin-bottom: 30px;
+	width: 80%;
+}
+.lead span,
+.lead a {
+	color: var(--indian-red);
+}
