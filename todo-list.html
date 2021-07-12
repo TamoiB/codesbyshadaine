@@ -4,7 +4,6 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="/css/modal.css" />
 		<script src="https://kit.fontawesome.com/70856632d3.js" crossorigin="anonymous"></script>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-8NLVNCTEHB"></script>
@@ -17,7 +16,8 @@
 
 			gtag("config", "G-8NLVNCTEHB");
 		</script>
-		<title>Modal</title>
+		<link rel="stylesheet" href="/css/todo.css" />
+		<title>Document</title>
 	</head>
 	<body>
 		<nav class="navbar unselectable" id="nav">
@@ -41,40 +41,23 @@
 				<li class="listitems"><a href="files.html">Media Used</a></li>
 			</ul>
 		</nav>
-
-		<div class="container">
-			<div class="container-content" id="top">
-				<h3 class="title">Tolez | Modal</h3>
-				<p>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit possimus laudantium dicta
-					error, doloribus itaque quam ea officia perferendis repudiandae.
-				</p>
-				<input type="button" value="Click Me" class="btn" id="modalBtn" />
-			</div>
-			<div class="modal" id="modal">
-				<div class="modal-content">
-					<h1 class="modal-heading">TOLEZ</h1>
-					<i class="fas fa-times" id="closeModal"></i>
-					<p class="modal-para">
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, corrupti? Est nam tenetur,
-						vel iusto quae cupiditate facilis dolore ab minus quos perspiciatis amet quis, modi
-						nisi? Perspiciatis, itaque animi.
-					</p>
-					<button class="btn">Read More</button>
+		<main>
+			<div class="container">
+				<h2 class="heading">AdMath <span class="heading-span">|</span> ToDo List</h2>
+				<p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+				<div class="input-group">
+					<input class="input" type="text" name="doInput" id="doInput" />
+					<button class="btn" id="addInput" title="Add to List">
+						<i class="fas fa-plus" id=""></i>
+					</button>
 				</div>
+				<ul class="list" id="list">
+					<li>Do something</li>
+				</ul>
+				<button class="clear" id="clear">(Remove all)</button>
 			</div>
-		</div>
-		<script defer>
-			var btn = document.getElementById("modalBtn");
-			var p = document.getElementById("modal");
-			var close = document.getElementById("closeModal");
-			btn.addEventListener("click", () => {
-				p.style.display = "block";
-			});
-			close.addEventListener("click", () => {
-				p.style.display = "none";
-			});
-		</script>
+		</main>
+		<script src="/js/todo.js" defer></script>
 		<script src="/js/index.js"></script>
 	</body>
 </html>

@@ -4,7 +4,6 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="/css/modal.css" />
 		<script src="https://kit.fontawesome.com/70856632d3.js" crossorigin="anonymous"></script>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-8NLVNCTEHB"></script>
@@ -17,9 +16,10 @@
 
 			gtag("config", "G-8NLVNCTEHB");
 		</script>
-		<title>Modal</title>
+		<link rel="stylesheet" href="/css/random-bg-g.css" />
+		<title>Random Gradient Background</title>
 	</head>
-	<body>
+	<body id="body">
 		<nav class="navbar unselectable" id="nav">
 			<a href="index.html" class="brand" draggable="false">Codes by Shadaine</a>
 			<ul class="nav-list-lg">
@@ -42,39 +42,17 @@
 			</ul>
 		</nav>
 
-		<div class="container">
-			<div class="container-content" id="top">
-				<h3 class="title">Tolez | Modal</h3>
-				<p>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit possimus laudantium dicta
-					error, doloribus itaque quam ea officia perferendis repudiandae.
-				</p>
-				<input type="button" value="Click Me" class="btn" id="modalBtn" />
-			</div>
-			<div class="modal" id="modal">
-				<div class="modal-content">
-					<h1 class="modal-heading">TOLEZ</h1>
-					<i class="fas fa-times" id="closeModal"></i>
-					<p class="modal-para">
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, corrupti? Est nam tenetur,
-						vel iusto quae cupiditate facilis dolore ab minus quos perspiciatis amet quis, modi
-						nisi? Perspiciatis, itaque animi.
-					</p>
-					<button class="btn">Read More</button>
+		<section>
+			<div class="container">
+				<div class="content">
+					<h1 class="title">CSS Background Gradient</h1>
+					<i class="far fa-clipboard" id="copy" title="Copy to Clipboard"></i>
+					<p class="confirm" id="confirm">Copied to clipboard</p>
 				</div>
+				<button class="btn" id="btn">Click Me!</button>
 			</div>
-		</div>
-		<script defer>
-			var btn = document.getElementById("modalBtn");
-			var p = document.getElementById("modal");
-			var close = document.getElementById("closeModal");
-			btn.addEventListener("click", () => {
-				p.style.display = "block";
-			});
-			close.addEventListener("click", () => {
-				p.style.display = "none";
-			});
-		</script>
+		</section>
+		<script src="/js/random-bg-g.js"></script>
 		<script src="/js/index.js"></script>
 	</body>
 </html>

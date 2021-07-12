@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="/css/modal.css" />
+		<title>Animated Social Media Navigation</title>
 		<script src="https://kit.fontawesome.com/70856632d3.js" crossorigin="anonymous"></script>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-8NLVNCTEHB"></script>
@@ -17,7 +17,7 @@
 
 			gtag("config", "G-8NLVNCTEHB");
 		</script>
-		<title>Modal</title>
+		<link rel="stylesheet" href="/css/social-nav.css" />
 	</head>
 	<body>
 		<nav class="navbar unselectable" id="nav">
@@ -41,40 +41,29 @@
 				<li class="listitems"><a href="files.html">Media Used</a></li>
 			</ul>
 		</nav>
-
-		<div class="container">
-			<div class="container-content" id="top">
-				<h3 class="title">Tolez | Modal</h3>
-				<p>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit possimus laudantium dicta
-					error, doloribus itaque quam ea officia perferendis repudiandae.
-				</p>
-				<input type="button" value="Click Me" class="btn" id="modalBtn" />
-			</div>
-			<div class="modal" id="modal">
-				<div class="modal-content">
-					<h1 class="modal-heading">TOLEZ</h1>
-					<i class="fas fa-times" id="closeModal"></i>
-					<p class="modal-para">
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, corrupti? Est nam tenetur,
-						vel iusto quae cupiditate facilis dolore ab minus quos perspiciatis amet quis, modi
-						nisi? Perspiciatis, itaque animi.
-					</p>
-					<button class="btn">Read More</button>
+		<main>
+			<div class="container">
+				<div class="social">
+					<a href="https://www.instagram.com" target="blank"> <i class="fab fa-instagram"></i></a>
+				</div>
+				<div class="social">
+					<a href="https://www.facebook.com" target="blank">
+						<i class="fab fab fa-facebook-f"></i
+					></a>
+				</div>
+				<div class="social">
+					<a href="https://twitter.com" target="blank"><i class="fab fa-twitter"></i></a>
+				</div>
+				<div class="social">
+					<a href="https://www.snapchat.com/" target="blank"
+						><i class="fab fab fa-snapchat-ghost"></i
+					></a>
+				</div>
+				<div class="social">
+					<a href="https://www.youtube.com/" target="blank"><i class="fab fa-youtube"></i></a>
 				</div>
 			</div>
-		</div>
-		<script defer>
-			var btn = document.getElementById("modalBtn");
-			var p = document.getElementById("modal");
-			var close = document.getElementById("closeModal");
-			btn.addEventListener("click", () => {
-				p.style.display = "block";
-			});
-			close.addEventListener("click", () => {
-				p.style.display = "none";
-			});
-		</script>
+		</main>
 		<script src="/js/index.js"></script>
 	</body>
 </html>
