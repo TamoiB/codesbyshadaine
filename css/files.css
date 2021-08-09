@@ -40,23 +40,7 @@
   width: 100%;
   position: relative;
 }
-.title{
-   font-size: 2rem;
-   font-weight: 500;
-   margin-bottom: 30px;
-   font-family: var(--lora-font);
-   text-align: center;
-}
-.lead{
-  font-size: 1.15rem;
-  font-family: var(--mont-font);
-  text-align: center;
-  margin-bottom: 30px;
-  width: 80%;
-}
- .lead span,  .lead a{
-  color: var(--indian-red);
-}
+
 .media .lead a{
   font-style: italic;
   font-family: var(--lora-font);
@@ -265,9 +249,6 @@ iframe{
   }
   .media{
     padding: 10px;
-  }
-  .lead{
-    font-size: .9rem;
   }
 }
 
