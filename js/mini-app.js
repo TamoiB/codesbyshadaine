@@ -1,4 +1,4 @@
-const accordion = document.querySelectorAll('.group-text')
+const accordion = document.querySelectorAll('.title')
 
 for (let i = 0; i < accordion.length; i++) {
   accordion[i].addEventListener('click', () => {
