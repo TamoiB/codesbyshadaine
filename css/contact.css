@@ -1,9 +1,39 @@
 @import url('global.css');
 @import url('mini-app.css');
 
-.feedback{
-  margin-top: 130px;
+body{
+  background-color: #fff;
 }
+.spacer{
+  height: 5px;
+}
+.showcase-contact{
+  width: 100%;
+  height: 520px;
+  background: url('/images/contact/desk-setup.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.showcase-contact::after{
+  content: '';
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.227);
+}
+.show-img{
+ position: absolute;
+ bottom: -90px;
+ right: 30px;
+ width: 250px;
+ height: 250px;
+ z-index: 3;
+ border-radius: 5px;
+ box-shadow: 5px 5px 8px #ccc, -5px -5px 8px #ccc;
+}
+
 .feedback-content{
   width: 80%;
 }
@@ -13,4 +43,17 @@
 .btn{
   background-color: var(--cg-blue);
   border-color: inherit;
+}
+
+@media (max-width:950px) {
+  .spacer{
+    height: 2px;
+  }
+  .showcase-contact{
+    height: 450px;
+    display: none;
+  }
+  .show-img{
+    display: none;
+  }
 }
