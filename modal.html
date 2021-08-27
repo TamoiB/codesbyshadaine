@@ -1,93 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="title" content="Codes By Shadaine | The source of my codes" />
-		<meta
-			name="description"
-			content=" This is documentation of all the codes I created as practice. This will be something to look back at and track my progress over a period of time.    "
-		/>
-		<meta
-			name="keywords"
-			content="JavaScript, HTML, CSS, JS, Hypertext Markup Language, Free code, Downloadable code, Web Development, Responsive Website,"
-		/>
-		<meta name="robots" content="index, follow" />
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="language" content="English" />
-		<meta name="author" content="Shadaine Black" />
-		<link rel="stylesheet" href="/css/modal.css" />
-		<script src="https://kit.fontawesome.com/70856632d3.js" crossorigin="anonymous"></script>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-8NLVNCTEHB"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag("js", new Date());
 
-			gtag("config", "G-8NLVNCTEHB");
-		</script>
-		<title>Modal</title>
-	</head>
-	<body>
-		<nav class="navbar unselectable" id="nav">
-			<a href="index.html" class="brand" draggable="false">Codes by Shadaine</a>
-			<ul class="nav-list-lg">
-				<li class="list-items"><a href="index.html">Home</a></li>
-				<li class="list-items"><a href="web-project.html">Website Projects</a></li>
-				<li class="list-items"><a href="Mini-Projects.html">Mini App Projects</a></li>
-				<li class="list-items"><a href="files.html">Media Used</a></li>
-			</ul>
-		</nav>
-		<nav class="navbar-mobile" id="nav">
-			<div class="mobile-toggle">
-				<a href="index.html" class="brand">Codes by Shadaine</a>
-				<i class="fas fa-bars" id="toggle"></i>
-			</div>
-			<ul class="nav-list-sm unselectable" id="toggleList">
-				<li class="listitems"><a href="index.html">Home</a></li>
-				<li class="listitems"><a href="web-project.html">Website Projects</a></li>
-				<li class="listitems"><a href="Mini-Projects.html">Mini App Projects</a></li>
-				<li class="listitems"><a href="files.html">Media Used</a></li>
-			</ul>
-		</nav>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="/css/files.css">
+	<script src="https://kit.fontawesome.com/70856632d3.js" crossorigin="anonymous"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-8NLVNCTEHB"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
 
-		<div class="container">
-			<div class="container-content" id="top">
-				<h3 class="title">Tolez | Modal</h3>
-				<p>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit possimus laudantium dicta
-					error, doloribus itaque quam ea officia perferendis repudiandae.
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
+
+		gtag("config", "G-8NLVNCTEHB");
+	</script>
+	<title>Modal</title>
+</head>
+<style>
+	body {
+		background-color: #fff;
+		height: 100vh;
+	}
+
+	.container-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		margin-left: auto;
+		margin-right: auto;
+		width: 80%;
+		text-align: center;
+		transition: ease-in-out 1s;
+	}
+
+	.container {
+		height: 70%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.container-content p {
+		margin-bottom: 30px;
+		font-size: 1.2rem;
+	}
+
+	a {
+		color: #fff;
+		text-decoration: none;
+	}
+
+	.btn {
+		width: 30%;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: #333;
+		color: white;
+		padding: 0.3rem;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+
+	.btn:focus {
+		outline: none;
+	}
+
+	.modal {
+		display: none;
+		background-color: rgba(51, 51, 50, 0.555);
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		margin-left: auto;
+		position: fixed;
+		margin-right: auto;
+		z-index: 1;
+		transition: ease-in-out 3s;
+	}
+
+	.modal-content {
+		background-color: #fff;
+		margin-top: 30vh;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 10px;
+		display: flex;
+		flex-direction: column;
+		width: 60%;
+		padding: 20px;
+		position: relative;
+	}
+
+	.fas {
+		position: absolute;
+		top: 10px;
+		font-size: 1rem;
+		right: 10px;
+		color: rgb(180, 178, 178);
+		cursor: pointer;
+		transition: linear 1s;
+	}
+
+	.modal-heading {
+		text-align: center;
+		margin-bottom: 20px;
+		font-family: var(--lora-font);
+	}
+
+	.modal-para {
+		text-align: justify;
+		margin-bottom: 2rem;
+		font-family: var(--mont-font);
+	}
+
+	.modal-content .btn {
+		margin-left: auto;
+		margin-right: auto;
+		width: 30%;
+		border: none;
+		border-radius: 5px;
+		color: #fff;
+		padding: 10px;
+		background-color: var(--cg-blue);
+		cursor: pointer;
+		margin-bottom: 20px;
+	}
+
+	@media (max-width: 600px) {
+		.btn {
+			width: 50%;
+		}
+
+		.modal-content .btn {
+			width: 50%;
+		}
+	}
+
+	@media (max-width: 450px) {
+		.modal-content {
+			width: 80%;
+		}
+
+		.modal-content .btn {
+			width: 65%;
+		}
+	}
+</style>
+
+<body>
+	<nav class="navbar unselectable" id="nav">
+		<a href="index.html" class="brand" draggable="false">Codes by Shadaine</a>
+		<ul class="nav-list-lg">
+			<li class="list-items"><a href="index.html">Home</a></li>
+			<li class="list-items"><a href="web-project.html">Website Projects</a></li>
+			<li class="list-items"><a href="Mini-Projects.html">Mini App Projects</a></li>
+			<li class="list-items"><a href="files.html">Media Used</a></li>
+			<li class="list-items"><a href="contact.html">Contact Us</a></li>
+		</ul>
+	</nav>
+	<nav class="navbar-mobile" id="nav">
+		<div class="mobile-toggle">
+			<a href="index.html" class="brand">Codes by Shadaine</a>
+			<i class="fas fa-bars" id="toggle"></i>
+		</div>
+		<ul class="nav-list-sm unselectable" id="toggleList">
+			<p class="close-nav" id="closeNav">&times;</p>
+			<li class="listitems"><a href="index.html">Home</a></li>
+			<li class="listitems"><a href="web-project.html">Website Projects</a></li>
+			<li class="listitems"><a href="Mini-Projects.html">Mini App Projects</a></li>
+			<li class="listitems"><a href="files.html">Media Used</a></li>
+			<li class="listitems"><a href="contact.html">Contact Us</a></li>
+		</ul>
+	</nav>
+
+	<div class="container">
+		<div class="container-content" id="top">
+			<h3 class="title">Codes By Shadaine | Modal</h3>
+			<p>
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit possimus laudantium dicta
+				error, doloribus itaque quam ea officia perferendis repudiandae.
+			</p>
+			<input type="button" value="Click Me" class="btn" id="modalBtn" />
+		</div>
+		<div class="modal" id="modal">
+			<div class="modal-content">
+				<h1 class="modal-heading">Codes By Shadaine</h1>
+				<i class="fas fa-times" id="closeModal"></i>
+				<p class="modal-para">
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, corrupti? Est nam tenetur,
+					vel iusto quae cupiditate facilis dolore ab minus quos perspiciatis amet quis, modi
+					nisi? Perspiciatis, itaque animi.
 				</p>
-				<input type="button" value="Click Me" class="btn" id="modalBtn" />
-			</div>
-			<div class="modal" id="modal">
-				<div class="modal-content">
-					<h1 class="modal-heading">TOLEZ</h1>
-					<i class="fas fa-times" id="closeModal"></i>
-					<p class="modal-para">
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, corrupti? Est nam tenetur,
-						vel iusto quae cupiditate facilis dolore ab minus quos perspiciatis amet quis, modi
-						nisi? Perspiciatis, itaque animi.
-					</p>
-					<button class="btn">Read More</button>
-				</div>
+				<button class="btn">Read More</button>
 			</div>
 		</div>
-		<script defer>
-			var btn = document.getElementById("modalBtn");
-			var p = document.getElementById("modal");
-			var close = document.getElementById("closeModal");
-			btn.addEventListener("click", () => {
-				p.style.display = "block";
-			});
-			close.addEventListener("click", () => {
-				p.style.display = "none";
-			});
-		</script>
-		<script src="/js/index.js"></script>
-	</body>
+	</div>
+	<script defer>
+		var btn = document.getElementById("modalBtn");
+		var p = document.getElementById("modal");
+		var close = document.getElementById("closeModal");
+		btn.addEventListener("click", () => {
+			p.style.display = "block";
+		});
+		close.addEventListener("click", () => {
+			p.style.display = "none";
+		});
+	</script>
+	<script src="/js/index.js"></script>
+</body>
+
 </html>

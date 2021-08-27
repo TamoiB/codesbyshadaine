@@ -1,16 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script src="https://kit.fontawesome.com/70856632d3.js" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="/css/404.css" />
-		<title>Page not found</title>
-	</head>
-	<body>
-		<h1 class="title"><span>Page not found</span></h1>
-		<h3 class="lead">Error 404</h3>
-		<p class="lead"><i class="fas fa-arrow-left"></i> <a href="index.html">Back to our site</a></p>
-	</body>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="https://kit.fontawesome.com/70856632d3.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="/css/files.css" />
+	<title>Page not found</title>
+</head>
+<style>
+	body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
+		background-color: var(--beige);
+	}
+
+	.title {
+		font-size: 2rem;
+		font-weight: 500;
+		margin-bottom: 30px;
+		font-family: var(--lora-font);
+		text-align: center;
+	}
+
+	.lead {
+		font-size: 1.15rem;
+		font-family: var(--mont-font);
+		text-align: center;
+		margin-bottom: 30px;
+		width: 80%;
+	}
+
+	.lead span,
+	.lead a {
+		color: var(--indian-red);
+	}
+</style>
+
+<body>
+	<h1 class="title"><span>Page not found</span></h1>
+	<h3 class="lead">Error 404</h3>
+	<p class="lead"><i class="fas fa-arrow-left"></i> <a href="index.html">Back to our site</a></p>
+</body>
+
 </html>

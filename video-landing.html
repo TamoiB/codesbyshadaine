@@ -1,76 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="title" content="Codes By Shadaine | The source of my codes" />
-		<meta
-			name="description"
-			content=" This is documentation of all the codes I created as practice. This will be something to look back at and track my progress over a period of time.    "
-		/>
-		<meta
-			name="keywords"
-			content="JavaScript, HTML, CSS, JS, Hypertext Markup Language, Free code, Downloadable code, Web Development, Responsive Website,"
-		/>
-		<meta name="robots" content="index, follow" />
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="language" content="English" />
-		<meta name="author" content="Shadaine Black" />
-		<script src="https://kit.fontawesome.com/70856632d3.js" crossorigin="anonymous"></script>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-8NLVNCTEHB"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag("js", new Date());
 
-			gtag("config", "G-8NLVNCTEHB");
-		</script>
-		<link rel="stylesheet" href="/css/video-landing.css" />
-		<title>Full Screen Landing Page</title>
-	</head>
-	<body>
-		<div class="container">
-			<div class="container-bg">
-				<video src="/videos/stars-video.mp4" autoplay loop muted></video>
-			</div>
-			<nav class="navbar unselectable" id="nav">
-				<a href="index.html" class="brand" draggable="false">Codes by Shadaine</a>
-				<ul class="nav-list-lg">
-					<li class="list-items"><a href="index.html">Home</a></li>
-					<li class="list-items"><a href="web-project.html">Website Projects</a></li>
-					<li class="list-items"><a href="Mini-Projects.html">Mini App Projects</a></li>
-					<li class="list-items"><a href="files.html">Media Used</a></li>
-				</ul>
-			</nav>
-			<nav class="navbar-mobile" id="nav">
-				<div class="mobile-toggle">
-					<a href="index.html" class="brand">Codes by Shadaine</a>
-					<i class="fas fa-bars" id="toggle"></i>
-				</div>
-				<ul class="nav-list-sm unselectable" id="toggleList">
-					<li class="listitems"><a href="index.html">Home</a></li>
-					<li class="listitems"><a href="web-project.html">Website Projects</a></li>
-					<li class="listitems"><a href="Mini-Projects.html">Mini App Projects</a></li>
-					<li class="listitems"><a href="files.html">Media Used</a></li>
-				</ul>
-			</nav>
-			<div class="container-content">
-				<h2 class="heading">
-					<span>Welcome</span>
-					to Mizzle
-				</h2>
-				<p>
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem dolorem, quasi velit autem
-					vitae eum.
-				</p>
-				<button class="btn">Read More</button>
-				<!-- <input type="button" value="Read More" class="btn"> -->
-			</div>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="title" content="Codes By Shadaine | The source of my codes" />
+	<meta name="description"
+		content=" This is documentation of all the codes I created as practice. This will be something to look back at and track my progress over a period of time.    " />
+	<meta name="keywords"
+		content="JavaScript, HTML, CSS, JS, Hypertext Markup Language, Free code, Downloadable code, Web Development, Responsive Website," />
+	<meta name="robots" content="index, follow" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="language" content="English" />
+	<meta name="author" content="Shadaine Black" />
+	<script src="https://kit.fontawesome.com/70856632d3.js" crossorigin="anonymous"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-8NLVNCTEHB"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
+
+		gtag("config", "G-8NLVNCTEHB");
+	</script>
+	<link rel="stylesheet" href="/css/global.css" />
+	<title>Full Screen Landing Page</title>
+</head>
+<style>
+	.navbar,
+	.navbar-mobile {
+		background: transparent;
+	}
+
+	* {
+		padding: 0;
+		margin: 0;
+	}
+
+	video {
+		min-height: 100%;
+		min-width: 100%;
+		right: 0;
+		bottom: 0;
+		position: fixed;
+	}
+
+	.container-content {
+		position: absolute;
+		text-align: center;
+		top: 30vh;
+		margin: 0 25vw;
+		transition: linear 2s;
+	}
+
+	.container-content h2 {
+		text-align: center;
+		margin-bottom: 1.5rem;
+		font-size: 3rem;
+		font-family: var(--lora-font);
+		color: white;
+	}
+
+	.container-content p {
+		color: white;
+		font-size: 1rem;
+		font-family: var(--mont-font);
+		margin-bottom: 1.5rem;
+	}
+
+	.btn {
+		padding: .5rem;
+		width: 9.5rem;
+		background: transparent;
+		border: solid white 2px;
+		color: white;
+		font-family: var(--mont-font);
+		font-size: 1rem;
+		cursor: pointer;
+	}
+
+	.btn:hover {
+		color: black;
+		transition: ease-in-out 1000ms;
+		background: white;
+	}
+
+	.btn:focus {
+		outline: none;
+	}
+</style>
+
+<body>
+	<div class="container">
+		<div class="container-bg">
+			<video src="/videos/stars-video.mp4" autoplay loop muted></video>
 		</div>
-		<script src="/js/index.js"></script>
-	</body>
+		<nav class="navbar unselectable" id="nav">
+			<a href="index.html" class="brand" draggable="false">Codes by Shadaine</a>
+			<ul class="nav-list-lg">
+				<li class="list-items"><a href="index.html">Home</a></li>
+				<li class="list-items"><a href="web-project.html">Website Projects</a></li>
+				<li class="list-items"><a href="Mini-Projects.html">Mini App Projects</a></li>
+				<li class="list-items"><a href="files.html">Media Used</a></li>
+				<li class="list-items"><a href="contact.html">Contact Us</a></li>
+			</ul>
+		</nav>
+		<nav class="navbar-mobile" id="nav">
+			<div class="mobile-toggle">
+				<a href="index.html" class="brand">Codes by Shadaine</a>
+				<i class="fas fa-bars" id="toggle"></i>
+			</div>
+			<ul class="nav-list-sm unselectable" id="toggleList">
+				<p class="close-nav" id="closeNav">&times;</p>
+				<li class="listitems"><a href="index.html">Home</a></li>
+				<li class="listitems"><a href="web-project.html">Website Projects</a></li>
+				<li class="listitems"><a href="Mini-Projects.html">Mini App Projects</a></li>
+				<li class="listitems"><a href="files.html">Media Used</a></li>
+				<li class="listitems"><a href="contact.html">Contact Us</a></li>
+			</ul>
+		</nav>
+		<div class="container-content">
+			<h2 class="heading">
+				<span>Welcome</span>
+				to Mizzle
+			</h2>
+			<p>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem dolorem, quasi velit autem
+				vitae eum.
+			</p>
+			<button class="btn">Read More</button>
+			<!-- <input type="button" value="Read More" class="btn"> -->
+		</div>
+	</div>
+	<script src="/js/index.js"></script>
+</body>
+
 </html>

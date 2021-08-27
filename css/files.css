@@ -2,7 +2,7 @@
 
 /* Showcase  */
 .showcase {
-  height: 400px;
+  height: 500px;
   background-image: url('https://static.wixstatic.com/media/4413f9b523b74b658fc475af2ad9bdb5.png/v1/crop/x_0,y_0,w_140,h_141,q_85/4413f9b523b74b658fc475af2ad9bdb5.webp');
   background-size: auto;
   background-repeat: repeat;
@@ -146,6 +146,10 @@ pre code {
   color: #fff;
   word-break: normal;
 }
+pre code .lead{
+  margin-left: auto;
+  margin-right: auto;
+}
 code a, code span {
   color: rgb(47, 214, 158);
 }
@@ -153,12 +157,11 @@ code a{
   text-decoration: underline;
 }
 .copy {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   cursor: pointer;
-  text-shadow: 1px 1px 1px #fff;
   color: #fff;
   position: absolute;
-  top: 10px;
+  top: 25px;
   right: 20px;
 }
 .confirm {
@@ -193,14 +196,18 @@ code a{
   height: 400px;
 }
 .tab-group{
-  top: -41px;
-  right: 2px;
+  top: -40px;
+  right: 0px;
   position: absolute;
+  background-color: rgb(41, 23, 23);
+  padding: 10px;
+  border: 2px solid rgb(41, 23, 23);
+  border-radius: 3px;
 }
 .tab-group .btn{
-  background-color: rgb(41, 23, 23);
-  border-color: rgb(41, 23, 23);
+  background: transparent;
   color: #fff;
+  border: none;
 }
 
 .line{
@@ -227,6 +234,7 @@ code a{
 iframe{
   border-radius: 15px;
   box-shadow: -8px -5px 2px #ccc;
+  width: 90%;
 }
 /* Responsive */
 @media (max-width:1050px) {
@@ -235,17 +243,44 @@ iframe{
      grid-template-rows: repeat(3, 1fr);
   }
 }
-@media (max-width:650px) {
+@media (max-width:950px) {
+  .img-grid{
+    width: 100%;
+  }
+  .fonta-pre{
+    width: 100%;
+  }
+  code .lead{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  frame{
+    width: 100%;
+  }
+}
+@media (max-width:550px) {
   .img-grid{
      grid-template-columns:repeat(1, 1fr);
   }
-  .fonta-pre{
-    width: 90%;
+  .frame{
+    display: none;
+  }
+  .showcase-title{
+    margin-top: 60px;
   }
 }
 @media (max-width:400px) {
   .img-grid{
     width: 95%;
+  }
+  .img-grid .btn{
+    display: none;
+  }
+  .img-lead{
+    margin: 30px 0;
+  }
+  .vid{
+    width: 100%;
   }
   .media{
     padding: 10px;

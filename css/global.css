@@ -73,7 +73,7 @@ a.btn{
   margin-bottom: 30px;
   width: 80%;
 }
- .lead span,  .lead a{
+ .lead span,  .lead a, .title span{
   color: var(--indian-red);
 }
 img{
@@ -108,6 +108,9 @@ marquee a{
   margin-left: 20px;
   font-family: var(--lora-font);
 }
+.brand:hover{
+  color:#d8d7d7;
+}
 
 .nav-list-lg {
   display: flex;
@@ -119,6 +122,10 @@ marquee a{
   color: #fff;
   margin-right: 20px;
   font-size: .9rem;
+}
+.nav-list-lg .active a{
+border-bottom: 2px solid #fff;
+font-style: italic;
 }
 
 /* Navigation Small Screens */
@@ -137,17 +144,19 @@ marquee a{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 15px;
   margin: 0 30px;
 }
 
 .mobile-toggle .fas {
-  border: 1px #fff solid;
+  font-size: 1.2rem;
+  border: 2px #fff solid;
   border-radius: 3px;
   background-color: transparent;
   cursor: pointer;
   padding: 5px 10px;
   margin-right: 20px;
+  color: #fff;
 }
 
 .nav-list-sm {
@@ -155,6 +164,7 @@ marquee a{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .listitems {
@@ -277,6 +287,26 @@ iframe {
 
   .mobile-toggle .fas {
     margin-right: 5px;
+  }
+  .nav-list-sm{
+    height: 100vh;
+    width: 100%;
+   position: absolute;
+  background-color: #000000ff;
+  }
+  .close-nav{
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    font-size: 3.5rem;
+    color: #aaa7a7;
+  }
+
+  .listitems{
+    font-size: 1.4rem;
+  }
+  .listitems:first-child{
+    margin-top: -100px;
   }
   
   .lead{

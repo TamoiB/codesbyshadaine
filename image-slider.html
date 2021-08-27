@@ -1,39 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="title" content="Codes By Shadaine | The source of my codes"><meta name="description" content=" This is documentation of all the codes I created as practice. This will be something to look back at and track my progress over a period of time.    "><meta name="keywords" content="JavaScript, HTML, CSS, JS, Hypertext Markup Language, Free code, Downloadable code, Web Development, Responsive Website,"><meta name="robots" content="index, follow"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="language" content="English"><meta name="author" content="Shadaine Black">
+  <meta name="title" content="Codes By Shadaine | The source of my codes">
   <script src="https://kit.fontawesome.com/70856632d3.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/css/image-slider.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/global.css">
   <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8NLVNCTEHB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8NLVNCTEHB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-8NLVNCTEHB');
-</script>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-8NLVNCTEHB');
+  </script>
   <title>Image Slider</title>
 </head>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Quicksand', sans-serif;
+    background: #324;
+    color: white;
+    line-height: 1.6;
+  }
+
+  .slider {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+  }
+
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+  }
+
+  .current {
+    opacity: 1;
+  }
+
+  .slide .content {
+    position: absolute;
+    bottom: 70px;
+    left: -700px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 25px;
+    opacity: 0;
+    width: 600px;
+  }
+
+  .slide.current .content {
+    opacity: 1;
+    transition: ease-in-out;
+    transition-duration: 0.7s;
+    transition-delay: 0.3;
+    transform: translateX(700px);
+  }
+
+  button#next {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+  }
+
+  button#prev {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+  }
+
+  .buttons button {
+    border: 2px solid white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+    background: transparent;
+  }
+
+  .slide:first-child {
+    background: url(/images/image-slider-images/bg-image1.jpeg) no-repeat center center/cover;
+    transition: .8s ease-in all;
+  }
+
+  .slide:nth-child(2) {
+    background: url(/images/image-slider-images/bg-image2.jpeg) no-repeat center top/cover;
+    transition: .8s ease-in all;
+  }
+
+  .slide:nth-child(3) {
+    background: url(/images/image-slider-images/bg-image3.jpeg) no-repeat center top/cover;
+    transition: .8s ease-in all;
+  }
+
+  .slide:nth-child(4) {
+    transition: .8s ease-in all;
+    background: url(/images/image-slider-images/bg-image4.jpeg) no-repeat center top/cover;
+  }
+
+  .slide:nth-child(5) {
+    transition: .8s ease-in all;
+    background: url(/images/image-slider-images/bg-image5.jpeg) no-repeat center top/cover;
+  }
+
+  .slide:nth-child(6) {
+    transition: .8s ease-in all;
+    background: url(/images/image-slider-images/bg-image6.jpeg) no-repeat center top/cover;
+  }
+
+  .slide:nth-child(7) {
+    transition: .8s ease-in all;
+    background: url(/images/image-slider-images/bg-image7.jpg) no-repeat center top/cover;
+  }
+
+  @media (max-width:700px) {
+
+    .slide .content {
+      width: 60%;
+      bottom: 50px;
+      padding: 15px;
+    }
+  }
+</style>
+
 <body>
-   <nav class="navbar unselectable" id="nav"> 
+  <nav class="navbar unselectable" id="nav">
     <a href="index.html" class="brand" draggable="false">Codes by Shadaine</a>
     <ul class="nav-list-lg">
       <li class="list-items"><a href="index.html">Home</a></li>
       <li class="list-items"><a href="web-project.html">Website Projects</a></li>
       <li class="list-items"><a href="Mini-Projects.html">Mini App Projects</a></li>
       <li class="list-items"><a href="files.html">Media Used</a></li>
+      <li class="list-items"><a href="contact.html">Contact Us</a></li>
     </ul>
   </nav>
   <nav class="navbar-mobile" id="nav">
     <div class="mobile-toggle">
-     <a href="index.html" class="brand">Codes by Shadaine</a>
+      <a href="index.html" class="brand">Codes by Shadaine</a>
       <i class="fas fa-bars" id="toggle"></i>
     </div>
     <ul class="nav-list-sm unselectable" id="toggleList">
+      <p class="close-nav" id="closeNav">&times;</p>
       <li class="listitems"><a href="index.html">Home</a></li>
       <li class="listitems"><a href="web-project.html">Website Projects</a></li>
       <li class="listitems"><a href="Mini-Projects.html">Mini App Projects</a></li>
@@ -44,52 +172,98 @@
     <div class="slide current">
       <div class="content">
         <h1>Slide one</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta impedit ex aspernatur blanditiis voluptates expedita.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta impedit ex aspernatur blanditiis voluptates
+          expedita.</p>
       </div>
     </div>
     <div class="slide ">
       <div class="content">
         <h1>Slide two</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta impedit ex aspernatur blanditiis voluptates expedita.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta impedit ex aspernatur blanditiis voluptates
+          expedita.</p>
       </div>
     </div>
     <div class="slide ">
       <div class="content">
         <h1>Slide three</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta impedit ex aspernatur blanditiis voluptates expedita.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta impedit ex aspernatur blanditiis voluptates
+          expedita.</p>
       </div>
     </div>
     <div class="slide ">
       <div class="content">
         <h1>Slide four</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta impedit ex aspernatur blanditiis voluptates expedita.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta impedit ex aspernatur blanditiis voluptates
+          expedita.</p>
       </div>
     </div>
     <div class="slide ">
       <div class="content">
         <h1>Slide five</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta impedit ex aspernatur blanditiis voluptates expedita.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta impedit ex aspernatur blanditiis voluptates
+          expedita.</p>
       </div>
     </div>
     <div class="slide ">
       <div class="content">
         <h1>Slide six</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta impedit ex aspernatur blanditiis voluptates expedita.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta impedit ex aspernatur blanditiis voluptates
+          expedita.</p>
       </div>
     </div>
     <div class="slide ">
       <div class="content">
         <h1>Slide seven</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta impedit ex aspernatur blanditiis voluptates expedita.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta impedit ex aspernatur blanditiis voluptates
+          expedita.</p>
       </div>
     </div>
-    </div>
+  </div>
   </div>
   <div class="buttons">
     <button id="prev"><i class="fas fa-arrow-left"></i></button>
     <button id="next"><i class="fas fa-arrow-right"></i></button>
   </div>
-  <script src="/js/image-slider.js"></script>
+  <script defer>
+    const slides = document.querySelectorAll('.slide');
+    const next = document.querySelector('#next');
+    const prev = document.querySelector('#prev');
+    const auto = false;
+    const intervalTime = 5000;
+    let slideInterval;
+    const nextSlide = () => {
+      const current = document.querySelector('.current');
+      current.classList.remove('current');
+      if (current.nextElementSibling) {
+        current.nextElementSibling.classList.add('current');
+      } else {
+        slides[0].classList.add('current');
+      }
+      setTimeout(() => current.classList.remove('current'));
+    }
+    const prevSlide = () => {
+      const current = document.querySelector('.current');
+      current.classList.remove('current');
+      if (current.previousElementSibling) {
+        current.previousElementSibling.classList.add('current');
+      } else {
+        slides[slides.length - 1].classList.add('current');
+      }
+      setTimeout(() => current.classList.remove('current'));
+    };
+    next.addEventListener('click', e => {
+      nextSlide();
+    })
+    prev.addEventListener('click', e => {
+      prevSlide();
+    })
+    if (auto) {
+      slideInterval = setInterval(nextSlide, intervalTime);
+    } else {
+
+    }
+  </script>
   <script src="/js/index.js"></script>
 </body>
+
 </html>

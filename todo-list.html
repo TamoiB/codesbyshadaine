@@ -1,76 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="title" content="Codes By Shadaine | The source of my codes" />
-		<meta
-			name="description"
-			content=" This is documentation of all the codes I created as practice. This will be something to look back at and track my progress over a period of time.    "
-		/>
-		<meta
-			name="keywords"
-			content="JavaScript, HTML, CSS, JS, Hypertext Markup Language, Free code, Downloadable code, Web Development, Responsive Website,"
-		/>
-		<meta name="robots" content="index, follow" />
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="language" content="English" />
-		<meta name="author" content="Shadaine Black" />
-		<script src="https://kit.fontawesome.com/70856632d3.js" crossorigin="anonymous"></script>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-8NLVNCTEHB"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag("js", new Date());
 
-			gtag("config", "G-8NLVNCTEHB");
-		</script>
-		<link rel="stylesheet" href="/css/todo.css" />
-		<title>Document</title>
-	</head>
-	<body>
-		<nav class="navbar unselectable" id="nav">
-			<a href="index.html" class="brand" draggable="false">Codes by Shadaine</a>
-			<ul class="nav-list-lg">
-				<li class="list-items"><a href="index.html">Home</a></li>
-				<li class="list-items"><a href="web-project.html">Website Projects</a></li>
-				<li class="list-items"><a href="Mini-Projects.html">Mini App Projects</a></li>
-				<li class="list-items"><a href="files.html">Media Used</a></li>
-			</ul>
-		</nav>
-		<nav class="navbar-mobile" id="nav">
-			<div class="mobile-toggle">
-				<a href="index.html" class="brand">Codes by Shadaine</a>
-				<i class="fas fa-bars" id="toggle"></i>
-			</div>
-			<ul class="nav-list-sm unselectable" id="toggleList">
-				<li class="listitems"><a href="index.html">Home</a></li>
-				<li class="listitems"><a href="web-project.html">Website Projects</a></li>
-				<li class="listitems"><a href="Mini-Projects.html">Mini App Projects</a></li>
-				<li class="listitems"><a href="files.html">Media Used</a></li>
-			</ul>
-		</nav>
-		<main>
-			<div class="container">
-				<h2 class="heading">AdMath <span class="heading-span">|</span> ToDo List</h2>
-				<p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-				<div class="input-group">
-					<input class="input" type="text" name="doInput" id="doInput" />
-					<button class="btn" id="addInput" title="Add to List">
-						<i class="fas fa-plus" id=""></i>
-					</button>
-				</div>
-				<ul class="list" id="list">
-					<li>Do something</li>
-				</ul>
-				<button class="clear" id="clear">(Remove all)</button>
-			</div>
-		</main>
-		<script src="/js/todo.js" defer></script>
-		<script src="/js/index.js"></script>
-	</body>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="https://kit.fontawesome.com/70856632d3.js" crossorigin="anonymous"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-8NLVNCTEHB"></script>
+	<link rel="stylesheet" href="/css/global.css" />
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
+		gtag("config", "G-8NLVNCTEHB");
+	</script>
+	<title>Todo List | Codes By Shadaine</title>
+</head>
+<style>
+	:root {
+		--main-color: #dc143c
+	}
+
+	* {
+		padding: 0;
+		margin: 0
+	}
+
+	body {
+		background-color: #fff;
+		height: 100vh;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background: linear-gradient(112.9deg, rgba(112, 255, 151, 1)6.2%, rgba(70, 195, 255, 1)99.7%)
+	}
+
+	main {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center
+	}
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin-top: 25%;
+		margin-bottom: 100px;
+		background-color: rgba(255, 255, 255, .3);
+		padding: 20px;
+		border-radius: 10px;
+		width: 70%
+	}
+
+	.heading {
+		font-size: 1.5rem;
+		font-family: 'Nova Flat', cursive;
+		text-align: center;
+		margin-bottom: 1rem
+	}
+
+	.heading-span {
+		color: var(--main-color);
+		font-weight: bolder
+	}
+
+	.content {
+		font-family: 'NanumMyeongjo', serif;
+		text-align: center;
+		margin-bottom: .8rem
+	}
+
+	.input-group {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: 2px;
+		width: 100%
+	}
+
+	.input {
+		width: 80%;
+		background-color: transparent;
+		border: none;
+		border-bottom: solid 2px #000;
+		font-family: var(--dafault-text);
+		font-size: 1rem;
+		padding: 3px
+	}
+
+	.input:focus {
+		outline: none
+	}
+
+	main.fas {
+		font-size: 16px;
+		color: var(--main-color)
+	}
+
+	.btn {
+		cursor: pointer;
+		width: 30px;
+		height: 30px;
+		background-color: transparent;
+		border: 2px solid#000;
+		border-radius: 50%
+	}
+
+	.list {
+		margin-top: 2rem;
+		text-decoration: none;
+		margin-left: .5rem;
+		margin-right: .5rem;
+		text-align: justify
+	}
+
+	main li {
+		text-decoration: none;
+		font-size: .7rem;
+		font-family: var(--dafault-text);
+		list-style-type: none;
+		padding: 5px;
+		margin-top: 3px;
+		cursor: pointer;
+		letter-spacing: 1px;
+		position: relative
+	}
+
+	.ani {
+		animation-name: enter;
+		animation-timing-function: ease-in-out;
+		animation-duration: 1s
+	}
+
+	@keyframesenter {
+		0% {
+			transform: scale(0)
+		}
+
+		100% {
+			transform: scale(1)
+		}
+	}
+
+	main li:nth-child(odd) {
+		background-color: rgba(255, 255, 255, .9)
+	}
+
+	main li::before {
+		content: "\2610";
+		margin-right: 4px
+	}
+
+	main li:hover {
+		text-decoration: line-through;
+		transition: ease-in-out 1s
+	}
+
+	.checked {
+		font-weight: bold;
+		font-style: italic;
+		color: var(--main-color);
+		transition: none
+	}
+
+	.checked:hover {
+		text-decoration: none
+	}
+
+	.checked::before {
+		content: '\2713';
+		font-weight: bolder;
+		color: #006400;
+		font-size: 1rem
+	}
+
+	.checked::after {
+		content: '\26CC';
+		padding: 0 3px;
+		right: 2px;
+		font-style: normal;
+		position: absolute
+	}
+
+	.clear {
+		width: 100px;
+		font-size: 1rem;
+		background: transparent;
+		border: none;
+		color: rgb(194, 191, 191);
+		margin-left: auto;
+		margin-right: auto;
+		cursor: pointer;
+		margin-top: 20px
+	}
+
+	.clear:hover {
+		color: #333;
+		transition: all ease-in-out .5s
+	}
+
+	@media (max-width:950px) {
+		.heading {
+			font-size: 2rem
+		}
+
+		main li {
+			font-size: 1rem
+		}
+	}
+
+	@media(max-width:450px) {
+		.container {
+			width: 90%
+		}
+
+		.heading {
+			font-size: 1.1rem
+		}
+
+		.content {
+			font-size: .9rem
+		}
+	}
+</style>
+
+<body>
+	<nav class="navbar unselectable" id="nav"><a href="index.html" class="brand" draggable="false">Codes by Shadaine</a>
+		<ul class="nav-list-lg">
+			<li class="list-items"><a href="index.html">Home</a></li>
+			<li class="list-items"><a href="web-project.html">Website Projects</a></li>
+			<li class="list-items"><a href="Mini-Projects.html">Mini App Projects</a></li>
+			<li class="list-items"><a href="files.html">Media Used</a></li>
+			<li class="list-items"><a href="contact.html">Contact Us</a></li>
+		</ul>
+	</nav>
+	<nav class="navbar-mobile" id="nav">
+		<div class="mobile-toggle"><a href="index.html" class="brand">Codes by Shadaine</a><i class="fas fa-bars"
+				id="toggle"></i></div>
+		<ul class="nav-list-sm unselectable" id="toggleList">
+			<p class="close-nav" id="closeNav">&times;</p>
+			<li class="listitems"><a href="index.html">Home</a></li>
+			<li class="listitems"><a href="web-project.html">Website Projects</a></li>
+			<li class="listitems"><a href="Mini-Projects.html">Mini App Projects</a></li>
+			<li class="listitems"><a href="files.html">Media Used</a></li>
+			<li class="listitems"><a href="contact.html">Contact Us</a></li>
+		</ul>
+	</nav>
+	<main>
+		<div class="container">
+			<h2 class="heading">AdMath <span class="heading-span">|</span>ToDo List</h2>
+			<p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+			<div class="input-group"><input class="input" type="text" name="doInput" id="doInput" /><button class="btn"
+					id="addInput" title="Add to List"><i class="fas fa-plus" id=""></i></button></div>
+			<ul class="list" id="list">
+				<li>Do something</li>
+			</ul><button class="clear" id="clear">(Remove all)</button>
+		</div>
+	</main>
+	<script defer>
+		var add = document.getElementById('addInput');
+		var newItem = document.getElementById('doInput');
+		var clear = document.getElementById('clear');
+		var list = document.getElementById('list');
+		var listers = document.querySelector('#list')
+		listItem = document.getElementsByTagName('li');
+		var todo;
+		//Adding To do task
+		add.addEventListener('click', addItemToList)
+		newItem.addEventListener('keydown', function (e) {
+			if (e.code === "Enter") {
+				addItemToList();
+			}
+		})
+
+		function addItemToList() {
+			if (newItem.value != '') {
+				todo = '<li>' + newItem.value + '</li>';
+				list.innerHTML += todo;
+				save();
+				newItem.value = ' '
+			} else {
+				return
+			}
+		}
+		//Removing to do task
+		listers.addEventListener('click', (e) => {
+			var h = e.target;
+			if (h.classList.contains('checked')) {
+				h.parentNode.removeChild(h)
+				save();
+			} else {
+				h.classList.add('checked')
+				save()
+			}
+		}, false)
+		//Clear All
+		clear.addEventListener('click', () => {
+			list.innerHTML = ' '
+			save()
+		})
+		//Saving todo
+		function save() {
+			window.localStorage.myitems = list.innerHTML;
+		} //Restore List
+		function restore() {
+			if (window.localStorage !== null) {
+				list.innerHTML = window.localStorage.myitems;
+			}
+		}
+		restore();
+	</script>
+	<script src="/js/index.js"></script>
+</body>
+
 </html>

@@ -1,69 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="title" content="Codes By Shadaine | The source of my codes" />
-		<meta
-			name="description"
-			content=" This is documentation of all the codes I created as practice. This will be something to look back at and track my progress over a period of time.    "
-		/>
-		<meta
-			name="keywords"
-			content="JavaScript, HTML, CSS, JS, Hypertext Markup Language, Free code, Downloadable code, Web Development, Responsive Website,"
-		/>
-		<meta name="robots" content="index, follow" />
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="language" content="English" />
-		<meta name="author" content="Shadaine Black" />
-		<script src="https://kit.fontawesome.com/70856632d3.js" crossorigin="anonymous"></script>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-8NLVNCTEHB"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag("js", new Date());
 
-			gtag("config", "G-8NLVNCTEHB");
-		</script>
-		<link rel="stylesheet" href="/css/random-bg-img.css" />
-		<title>Random Background Image</title>
-	</head>
-	<body id="body">
-		<nav class="navbar unselectable" id="nav">
-			<a href="index.html" class="brand" draggable="false">Codes by Shadaine</a>
-			<ul class="nav-list-lg">
-				<li class="list-items"><a href="index.html">Home</a></li>
-				<li class="list-items"><a href="web-project.html">Website Projects</a></li>
-				<li class="list-items"><a href="Mini-Projects.html">Mini App Projects</a></li>
-				<li class="list-items"><a href="files.html">Media Used</a></li>
-			</ul>
-		</nav>
-		<nav class="navbar-mobile" id="nav">
-			<div class="mobile-toggle">
-				<a href="index.html" class="brand">Codes by Shadaine</a>
-				<i class="fas fa-bars" id="toggle"></i>
-			</div>
-			<ul class="nav-list-sm unselectable" id="toggleList">
-				<li class="listitems"><a href="index.html">Home</a></li>
-				<li class="listitems"><a href="web-project.html">Website Projects</a></li>
-				<li class="listitems"><a href="Mini-Projects.html">Mini App Projects</a></li>
-				<li class="listitems"><a href="files.html">Media Used</a></li>
-			</ul>
-		</nav>
-		<main class="main">
-			<div class="container">
-				<h1 class="text" id="backgroundText">Background Image:</h1>
-				<h3 class="color" id="backgroundColor">Midnight Stars</h3>
-			</div>
-			<div class="container1">
-				<button class="btn" id="button">Click Me!</button>
-			</div>
-		</main>
-		<script src="/js/random-bg-img.js"></script>
-		<script src="/js/index.js"></script>
-	</body>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="title" content="Codes By Shadaine | The source of my codes" />
+	<script src="https://kit.fontawesome.com/70856632d3.js" crossorigin="anonymous"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-8NLVNCTEHB"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
+
+		gtag("config", "G-8NLVNCTEHB");
+	</script>
+	<link rel="stylesheet" href="/css/random-bg-img.css" />
+	<title>Random Background Image</title>
+</head>
+<style>
+	#body {
+		background-image:
+			url('https://images.pexels.com/photos/1252869/pexels-photo-1252869.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+		background-repeat: no-repeat;
+		height: 100vh;
+		background-size: cover;
+		background-position: center;
+		overflow: hidden;
+		transition: .4s ease-in-out all;
+		padding: 0;
+		margin: 0;
+	}
+
+	.navbar,
+	.navbar-mobile {
+		background-color: transparent;
+	}
+
+	.main {
+		background-color: rgba(255, 255, 255, 0.37);
+		padding: 10px;
+		border-radius: 10px;
+		height: 170px;
+		width: 60%;
+		height: 300px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+	}
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		transition: all 0.2s ease-in-out;
+		color: #000;
+		gap: 10px;
+	}
+
+	.container1 {
+		display: flex;
+		justify-content: center;
+		transition: all ease-in-out 0.2s;
+	}
+
+	.text {
+		font-size: 20px;
+		font-weight: bolder;
+	}
+
+	.color {
+		font-size: 20px;
+		font-style: italic;
+		font-weight: bold;
+	}
+
+	.btn {
+		font-size: 1.2rem;
+		background-color: transparent;
+		border: solid #fff 2px;
+		border-radius: 3px;
+		cursor: pointer;
+		width: 150px;
+		padding: 10px;
+	}
+
+	.btn:hover {
+		background-color: #fff;
+		font-style: italic;
+		border-color: #000;
+	}
+
+	.btn:focus {
+		outline: none;
+	}
+</style>
+
+<body id="body">
+	<nav class="navbar unselectable" id="nav">
+		<a href="index.html" class="brand" draggable="false">Codes by Shadaine</a>
+		<ul class="nav-list-lg">
+			<li class="list-items"><a href="index.html">Home</a></li>
+			<li class="list-items"><a href="web-project.html">Website Projects</a></li>
+			<li class="list-items"><a href="Mini-Projects.html">Mini App Projects</a></li>
+			<li class="list-items"><a href="files.html">Media Used</a></li>
+			<li class="list-items"><a href="contact.html">Contact Us</a></li>
+		</ul>
+	</nav>
+	<nav class="navbar-mobile" id="nav">
+		<div class="mobile-toggle">
+			<a href="index.html" class="brand">Codes by Shadaine</a>
+			<i class="fas fa-bars" id="toggle"></i>
+		</div>
+		<ul class="nav-list-sm unselectable" id="toggleList">
+			<li class="listitems"><a href="index.html">Home</a></li>
+			<li class="listitems"><a href="web-project.html">Website Projects</a></li>
+			<li class="listitems"><a href="Mini-Projects.html">Mini App Projects</a></li>
+			<li class="listitems"><a href="files.html">Media Used</a></li>
+			<li class="listitems"><a href="contact.html">Contact Us</a></li>
+		</ul>
+	</nav>
+	<main class="main">
+		<div class="container">
+			<h1 class="text" id="backgroundText">Background Image:</h1>
+			<h3 class="color" id="backgroundColor">Midnight Stars</h3>
+		</div>
+		<div class="container1">
+			<button class="btn" id="button">Click Me!</button>
+		</div>
+	</main>
+	<script>
+		const background = document.getElementById('backgroundText');
+		const colorName = document.getElementById('backgroundColor');
+		const btn = document.getElementById('button');
+		const body = document.getElementById('body');
+		const colorArray = [
+			"url('https://images.pexels.com/photos/1252869/pexels-photo-1252869.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')",
+			"url('https://images.pexels.com/photos/2885320/pexels-photo-2885320.jpeg?auto=compress&cs=tinysrgb&h=650&w=940')",
+			"url('https://images.pexels.com/photos/624015/pexels-photo-624015.jpeg?auto=compress&cs=tinysrgb&h=650&w=940')",
+			"url('https://images.pexels.com/photos/1025469/pexels-photo-1025469.jpeg?auto=compress&cs=tinysrgb&h=650&w=940')",
+			"url('https://images.pexels.com/photos/844297/pexels-photo-844297.jpeg?auto=compress&cs=tinysrgb&h=650&w=940')",
+			"url('https://images.pexels.com/photos/132037/pexels-photo-132037.jpeg?auto=compress&cs=tinysrgb&h=650&w=940')",
+			"url('https://images.pexels.com/photos/814499/pexels-photo-814499.jpeg?auto=compress&cs=tinysrgb&h=650&w=940')",
+
+		]
+		const colorArrayName = [
+			"Midnight Stars",
+			"Dark Forest",
+			"The Blue Igloo",
+			"Spiral Sunset",
+			"Clouds",
+			"Bridge to Success",
+			"The Gateway"
+		]
+		btn.addEventListener('click', change);
+
+		function change() {
+			var Index = parseInt(Math.random() * colorArray.length)
+			var num = Index;
+			colorName.innerText = colorArrayName[num];
+			body.style.backgroundImage = colorArray[Index];
+		}
+	</script>
+	<script src="/js/index.js"></script>
+</body>
+
 </html>

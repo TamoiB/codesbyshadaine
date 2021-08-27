@@ -25,6 +25,9 @@ const importBtn = document.getElementById('import');
 
  //Link Copy and Past 
  linkBtn.addEventListener('click', () =>{
+linkBtn.style.borderBottom= '#fff solid 2px';
+linkBtn.style.borderRadius = '0';
+importBtn.style.borderBottom= 'none';
 
 codeBody.innerHTML = `
 
@@ -66,7 +69,9 @@ comfirmText.addEventListener('mouseleave', () => {
 });
  //Import Copy and Past 
  importBtn.addEventListener('click', () =>{
-
+linkBtn.style.borderBottom= 'none';
+importBtn.style.borderBottom= '#fff solid 2px';
+importBtn.style.borderRadius = '0';
 codeBody.innerHTML = `
 
       &lt;style&gt;

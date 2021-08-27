@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/contact.css">
+  <script src="https://kit.fontawesome.com/70856632d3.js" crossorigin="anonymous"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8NLVNCTEHB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-8NLVNCTEHB");
+  </script>
+  <title>Contact Us | Codes By Shadaine</title>
+</head>
+
+<body>
+  <!-- Messenger Chat Plugin Code -->
+  <div id="fb-root"></div>
+
+  <!-- Your Chat Plugin code -->
+  <div id="fb-customer-chat" class="fb-customerchat">
+  </div>
+
+  <script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "106606441741835");
+    chatbox.setAttribute("attribution", "biz_inbox");
+
+    window.fbAsyncInit = function () {
+      FB.init({
+        xfbml: true,
+        version: 'v11.0'
+      });
+    };
+
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <!-- Navigation for large Screens -->
+  <nav class="navbar unselectable" id="nav">
+    <a href="index.html" class="brand" draggable="false">Codes by Shadaine</a>
+    <ul class="nav-list-lg">
+      <li class="list-items"><a href="index.html">Home</a></li>
+      <li class="list-items"><a href="web-project.html">Website Projects</a></li>
+      <li class="list-items"><a href="Mini-Projects.html">Mini App Projects</a></li>
+      <li class="list-items"><a href="files.html">Media Used</a></li>
+      <li class="list-items active"><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+  <!-- Navigation for Tablets and Mobile -->
+  <nav class="navbar-mobile" id="nav">
+    <div class="mobile-toggle">
+      <a href="index.html" class="brand">Codes by Shadaine</a>
+      <i class="fas fa-bars" id="toggle"></i>
+    </div>
+    <ul class="nav-list-sm" id="toggleList">
+      <p class="close-nav" id="closeNav">&times;</p>
+      <li class="listitems"><a href="index.html">Home</a></li>
+      <li class="listitems"><a href="web-project.html">Website Projects</a></li>
+      <li class="listitems"><a href="Mini-Projects.html">Mini App Projects</a></li>
+      <li class="listitems"><a href="files.html">Media Used</a></li>
+      <li class="listitems"><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+  <div class="feedback" id="feedback">
+    <h1 class="title">Contact <span>Us</span> </h1>
+    <div class="feedback-content">
+      <form class="form" data-netlify="true" name="feedback" method="POST" action="success.html">
+        <h1 class="title">
+          Share <span><i>your</i></span> views
+        </h1>
+        <div class="input-group">
+          <input type="text" name="name" id="name" placeholder="Fullname" required autocomplete="off" />
+          <input type="email" name="email" id="email" placeholder="Youremail@gmail.com" required autocomplete="email" />
+        </div>
+        <input type="text" name="subject" id="subject" placeholder="Subject" autocomplete="off" />
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
+        <input type="submit" value="Submit" class="btn" id="submit" />
+      </form>
+      <img src="/images/contact/contact.jpg" alt="Email clipart" />
+    </div>
+  </div>
+  <footer class="footer" id="footer">
+    <p class="unselectable">&copy; Code by Shadaine 2021</p>
+  </footer>
+  <script src="/js/index.js"></script>
+</body>
+
+</html>

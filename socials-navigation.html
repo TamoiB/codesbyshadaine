@@ -1,82 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="title" content="Codes By Shadaine | The source of my codes" />
-		<meta
-			name="description"
-			content=" This is documentation of all the codes I created as practice. This will be something to look back at and track my progress over a period of time.    "
-		/>
-		<meta
-			name="keywords"
-			content="JavaScript, HTML, CSS, JS, Hypertext Markup Language, Free code, Downloadable code, Web Development, Responsive Website,"
-		/>
-		<meta name="robots" content="index, follow" />
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="language" content="English" />
-		<meta name="author" content="Shadaine Black" />
-		<title>Animated Social Media Navigation</title>
-		<script src="https://kit.fontawesome.com/70856632d3.js" crossorigin="anonymous"></script>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-8NLVNCTEHB"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag("js", new Date());
 
-			gtag("config", "G-8NLVNCTEHB");
-		</script>
-		<link rel="stylesheet" href="/css/social-nav.css" />
-	</head>
-	<body>
-		<nav class="navbar unselectable" id="nav">
-			<a href="index.html" class="brand" draggable="false">Codes by Shadaine</a>
-			<ul class="nav-list-lg">
-				<li class="list-items"><a href="index.html">Home</a></li>
-				<li class="list-items"><a href="web-project.html">Website Projects</a></li>
-				<li class="list-items"><a href="Mini-Projects.html">Mini App Projects</a></li>
-				<li class="list-items"><a href="files.html">Media Used</a></li>
-			</ul>
-		</nav>
-		<nav class="navbar-mobile" id="nav">
-			<div class="mobile-toggle">
-				<a href="index.html" class="brand">Codes by Shadaine</a>
-				<i class="fas fa-bars" id="toggle"></i>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="title" content="Codes By Shadaine | The source of my codes" />
+	<meta name="description"
+		content=" This is documentation of all the codes I created as practice. This will be something to look back at and track my progress over a period of time.    " />
+	<meta name="keywords"
+		content="JavaScript, HTML, CSS, JS, Hypertext Markup Language, Free code, Downloadable code, Web Development, Responsive Website," />
+	<meta name="robots" content="index, follow" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="language" content="English" />
+	<meta name="author" content="Shadaine Black" />
+	<title>Animated Social Media Navigation</title>
+	<script src="https://kit.fontawesome.com/70856632d3.js" crossorigin="anonymous"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-8NLVNCTEHB"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
+
+		gtag("config", "G-8NLVNCTEHB");
+	</script>
+	<link rel="stylesheet" href="/css/global.css" />
+</head>
+<style>
+	body {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		height: 100vh;
+		background: #333;
+	}
+
+	main {
+		width: 500px;
+		height: 200px;
+		background-color: rgba(255, 255, 255, 0.425);
+		border-radius: 25px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	main a {
+		color: #fff;
+		font-size: 2rem;
+	}
+
+	main a:hover {
+		transform: rotateY(180deg);
+		border-radius: 50%;
+		height: 3rem;
+		width: 3rem;
+		border: 1.3px solid #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-shadow: 3px 1px 1px #333;
+		transition: ease-in-out .7s transform;
+		box-shadow: 2px 2px 2px #333;
+		text-decoration: none;
+	}
+
+	.container {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		background-color: #ff00ff;
+		background: linear-gradient(27deg, rgba(186, 214, 66, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 69, 208, 1) 100%);
+		box-shadow: #ff00ff 7px 5px 1px;
+		padding: 5px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 400px;
+		height: 50px;
+		border-radius: 20px;
+		border: #fff 2px solid;
+	}
+
+	@media (max-width:550px) {
+		.container {
+			flex-direction: column;
+			height: 400px;
+			width: 50px;
+		}
+
+		main {
+			height: 470px;
+			width: 200px;
+			margin-top: 45px;
+		}
+	}
+</style>
+
+<body>
+	<nav class="navbar unselectable" id="nav">
+		<a href="index.html" class="brand" draggable="false">Codes by Shadaine</a>
+		<ul class="nav-list-lg">
+			<li class="list-items"><a href="index.html">Home</a></li>
+			<li class="list-items"><a href="web-project.html">Website Projects</a></li>
+			<li class="list-items"><a href="Mini-Projects.html">Mini App Projects</a></li>
+			<li class="list-items"><a href="files.html">Media Used</a></li>
+			<li class="list-items"><a href="contact.html">Contact Us</a></li>
+		</ul>
+	</nav>
+	<nav class="navbar-mobile" id="nav">
+		<div class="mobile-toggle">
+			<a href="index.html" class="brand">Codes by Shadaine</a>
+			<i class="fas fa-bars" id="toggle"></i>
+		</div>
+		<ul class="nav-list-sm unselectable" id="toggleList">
+			<p class="close-nav" id="closeNav">&times;</p>
+			<li class="listitems"><a href="index.html">Home</a></li>
+			<li class="listitems"><a href="web-project.html">Website Projects</a></li>
+			<li class="listitems"><a href="Mini-Projects.html">Mini App Projects</a></li>
+			<li class="listitems"><a href="files.html">Media Used</a></li>
+			<li class="listitems"><a href="contact.html">Contact Us</a></li>
+		</ul>
+	</nav>
+	<main>
+		<div class="container">
+			<div class="social">
+				<a href="https://www.instagram.com" target="blank"> <i class="fab fa-instagram"></i></a>
 			</div>
-			<ul class="nav-list-sm unselectable" id="toggleList">
-				<li class="listitems"><a href="index.html">Home</a></li>
-				<li class="listitems"><a href="web-project.html">Website Projects</a></li>
-				<li class="listitems"><a href="Mini-Projects.html">Mini App Projects</a></li>
-				<li class="listitems"><a href="files.html">Media Used</a></li>
-			</ul>
-		</nav>
-		<main>
-			<div class="container">
-				<div class="social">
-					<a href="https://www.instagram.com" target="blank"> <i class="fab fa-instagram"></i></a>
-				</div>
-				<div class="social">
-					<a href="https://www.facebook.com" target="blank">
-						<i class="fab fab fa-facebook-f"></i
-					></a>
-				</div>
-				<div class="social">
-					<a href="https://twitter.com" target="blank"><i class="fab fa-twitter"></i></a>
-				</div>
-				<div class="social">
-					<a href="https://www.snapchat.com/" target="blank"
-						><i class="fab fab fa-snapchat-ghost"></i
-					></a>
-				</div>
-				<div class="social">
-					<a href="https://www.youtube.com/" target="blank"><i class="fab fa-youtube"></i></a>
-				</div>
+			<div class="social">
+				<a href="https://www.facebook.com" target="blank">
+					<i class="fab fab fa-facebook-f"></i></a>
 			</div>
-		</main>
-		<script src="/js/index.js"></script>
-	</body>
+			<div class="social">
+				<a href="https://twitter.com" target="blank"><i class="fab fa-twitter"></i></a>
+			</div>
+			<div class="social">
+				<a href="https://www.snapchat.com/" target="blank"><i class="fab fab fa-snapchat-ghost"></i></a>
+			</div>
+			<div class="social">
+				<a href="https://www.youtube.com/" target="blank"><i class="fab fa-youtube"></i></a>
+			</div>
+		</div>
+	</main>
+	<script src="/js/index.js"></script>
+</body>
+
 </html>

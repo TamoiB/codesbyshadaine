@@ -1,0 +1,16 @@
+@import url('global.css');
+@import url('mini-app.css');
+
+.feedback{
+  margin-top: 130px;
+}
+.feedback-content{
+  width: 80%;
+}
+.title span, .lead span i{
+  color: var(--cg-blue);
+}
+.btn{
+  background-color: var(--cg-blue);
+  border-color: inherit;
+}

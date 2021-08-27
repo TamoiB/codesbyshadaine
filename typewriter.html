@@ -1,70 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="title" content="Codes By Shadaine | The source of my codes" />
-		<meta
-			name="description"
-			content=" This is documentation of all the codes I created as practice. This will be something to look back at and track my progress over a period of time.    "
-		/>
-		<meta
-			name="keywords"
-			content="JavaScript, HTML, CSS, JS, Hypertext Markup Language, Free code, Downloadable code, Web Development, Responsive Website,"
-		/>
-		<meta name="robots" content="index, follow" />
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="language" content="English" />
-		<meta name="author" content="Shadaine Black" />
-		<script src="https://kit.fontawesome.com/70856632d3.js" crossorigin="anonymous"></script>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-8NLVNCTEHB"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag("js", new Date());
 
-			gtag("config", "G-8NLVNCTEHB");
-		</script>
-		<link rel="stylesheet" href="/css/typewriter.css" />
-		<title>Type writer</title>
-	</head>
-	<body>
-		<nav class="navbar unselectable" id="nav">
-			<a href="index.html" class="brand" draggable="false">Codes by Shadaine</a>
-			<ul class="nav-list-lg">
-				<li class="list-items"><a href="index.html">Home</a></li>
-				<li class="list-items"><a href="web-project.html">Website Projects</a></li>
-				<li class="list-items"><a href="Mini-Projects.html">Mini App Projects</a></li>
-				<li class="list-items"><a href="files.html">Media Used</a></li>
-			</ul>
-		</nav>
-		<nav class="navbar-mobile" id="nav">
-			<div class="mobile-toggle">
-				<a href="index.html" class="brand">Codes by Shadaine</a>
-				<i class="fas fa-bars" id="toggle"></i>
-			</div>
-			<ul class="nav-list-sm unselectable" id="toggleList">
-				<li class="listitems"><a href="index.html">Home</a></li>
-				<li class="listitems"><a href="web-project.html">Website Projects</a></li>
-				<li class="listitems"><a href="Mini-Projects.html">Mini App Projects</a></li>
-				<li class="listitems"><a href="files.html">Media Used</a></li>
-			</ul>
-		</nav>
-		<div class="container">
-			<h1>
-				Shadaine Black The
-				<span
-					class="txt-type"
-					data-wait="3000"
-					data-words='[ "Mathematican", "Scientist", "Developer", "Boss"]'
-				></span>
-			</h1>
-			<h2>Welcome To My Website</h2>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="title" content="Codes By Shadaine | The source of my codes" />
+	<script src="https://kit.fontawesome.com/70856632d3.js" crossorigin="anonymous"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-8NLVNCTEHB"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
+
+		gtag("config", "G-8NLVNCTEHB");
+	</script>
+	<link rel="stylesheet" href="/css/global.css" />
+	<title>Type writer</title>
+</head>
+<style>
+	body {
+		font-family: var(--lora-font);
+		height: 100vh;
+		background:
+			url('https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') no-repeat center center/cover;
+		color: white;
+		overflow: hidden;
+	}
+
+	.navbar,
+	.navbar-mobile {
+		background: transparent;
+	}
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+		padding: 0 3rem;
+	}
+
+	h1,
+	h2 {
+		font-weight: 200;
+		margin: 0.4rem;
+
+	}
+
+	h1 {
+		font-size: 3.5rem;
+	}
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	.txt-type>.txt {
+		border-right: 0.2rem solid white;
+	}
+
+	@media (min-width:1200px) {
+		h1 {
+			font-size: 5rem;
+		}
+	}
+
+	@media (max-width:800px) {
+		h1 {
+			font-size: 3rem;
+		}
+
+		.container {
+			padding: 0 1rem;
+		}
+
+		@media (max-width:500px) {
+			h1 {
+				font-size: 2.5rem;
+				text-align: center;
+			}
+
+			h2 {
+				font-size: 1.5rem;
+				text-align: center;
+			}
+		}
+	}
+
+	@media (max-width:350px) {
+		h1 {
+			font-size: 1.8rem;
+			text-align: center;
+		}
+
+		h2 {
+			text-align: center;
+			font-size: 1rem;
+		}
+	}
+</style>
+
+<body>
+	<nav class="navbar unselectable" id="nav">
+		<a href="index.html" class="brand" draggable="false">Codes by Shadaine</a>
+		<ul class="nav-list-lg">
+			<li class="list-items"><a href="index.html">Home</a></li>
+			<li class="list-items"><a href="web-project.html">Website Projects</a></li>
+			<li class="list-items"><a href="Mini-Projects.html">Mini App Projects</a></li>
+			<li class="list-items"><a href="files.html">Media Used</a></li>
+			<li class="list-items"><a href="contact.html">Contact Us</a></li>
+		</ul>
+	</nav>
+	<nav class="navbar-mobile" id="nav">
+		<div class="mobile-toggle">
+			<a href="index.html" class="brand">Codes by Shadaine</a>
+			<i class="fas fa-bars" id="toggle"></i>
 		</div>
-		<script src="/js/type-writer.js"></script>
-	</body>
+		<ul class="nav-list-sm unselectable" id="toggleList">
+			<li class="listitems"><a href="index.html">Home</a></li>
+			<li class="listitems"><a href="web-project.html">Website Projects</a></li>
+			<li class="listitems"><a href="Mini-Projects.html">Mini App Projects</a></li>
+			<li class="listitems"><a href="files.html">Media Used</a></li>
+			<li class="listitems"><a href="contact.html">Contact Us</a></li>
+		</ul>
+	</nav>
+	<div class="container">
+		<h1>
+			Shadaine Black The
+			<span class="txt-type" data-wait="3000" data-words='[ "Mathematican", "Scientist", "Developer", "Boss"]'></span>
+		</h1>
+		<h2>Welcome To My Website</h2>
+	</div>
+	<script defer>
+		const TypeWriter = function (txtElement, words, wait = 3000) {
+			this.txtElement = txtElement;
+			this.words = words;
+			this.txt = '';
+			this.wordIndex = 0;
+			this.wait = parseInt(wait, 10);
+			this.type();
+			this.isDeleting = false;
+		}
+
+		TypeWriter.prototype.type = function () {
+			const current = this.wordIndex % this.words.length;
+			const full = this.words[current]
+			if (this.isDeleting) {
+				this.txt = full.substring(0, this.txt.length - 1)
+			} else {
+				this.txt = full.substring(0, this.txt.length + 1)
+			}
+			this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+
+			let typeSpeed = 300;
+			if (this.isDeleting) {
+				typeSpeed /= 2;
+			}
+
+			if (!this.isDeleting && this.txt === full) {
+				typeSpeed = this.wait;
+				this.isDeleting = true;
+			} else if (this.isDeleting && this.txt === '') {
+				this.isDeleting = false;
+				this.wordIndex++;
+				typeSpeed = 500;
+			}
+
+			setTimeout(() => this.type(), typeSpeed)
+		}
+
+		document.addEventListener('DOMContentLoaded', init);
+
+		function init() {
+			const txtElement = document.querySelector('.txt-type');
+			const words = JSON.parse(txtElement.getAttribute('data-words'));
+			const wait = txtElement.getAttribute('data-wait');
+			new TypeWriter(txtElement, words, wait);
+		}
+	</script>
+</body>
+
 </html>

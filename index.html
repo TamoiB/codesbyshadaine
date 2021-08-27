@@ -32,6 +32,34 @@
 </head>
 
 <body>
+  <!-- Messenger Chat Plugin Code -->
+  <div id="fb-root"></div>
+
+  <!-- Your Chat Plugin code -->
+  <div id="fb-customer-chat" class="fb-customerchat">
+  </div>
+
+  <script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "106606441741835");
+    chatbox.setAttribute("attribution", "biz_inbox");
+
+    window.fbAsyncInit = function () {
+      FB.init({
+        xfbml: true,
+        version: 'v11.0'
+      });
+    };
+
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
   <nav class="navbar unselectable" id="nav">
     <a href="index.html" class="brand" draggable="false">Codes by Shadaine</a>
     <ul class="nav-list-lg">
@@ -39,6 +67,7 @@
       <li class="list-items"><a href="web-project.html">Website Projects</a></li>
       <li class="list-items"><a href="Mini-Projects.html">Mini App Projects</a></li>
       <li class="list-items"><a href="files.html">Media Used</a></li>
+      <li class="list-items"><a href="contact.html">Contact Us</a></li>
     </ul>
   </nav>
   <nav class="navbar-mobile" id="nav">
@@ -47,10 +76,12 @@
       <i class="fas fa-bars" id="toggle"></i>
     </div>
     <ul class="nav-list-sm unselectable" id="toggleList">
+      <p class="close-nav" id="closeNav">&times;</p>
       <li class="listitems"><a href="index.html">Home</a></li>
       <li class="listitems"><a href="web-project.html">Website Projects</a></li>
       <li class="listitems"><a href="Mini-Projects.html">Mini App Projects</a></li>
       <li class="listitems"><a href="files.html">Media Used</a></li>
+      <li class="listitems"><a href="contact.html">Contact Us</a></li>
     </ul>
   </nav>
   <div class="showcase" id="showcase">
@@ -91,27 +122,7 @@
   <div class="frame unselectable">
     <iframe src="typewriter.html" frameborder="0" width="80%" height="500px"></iframe>
   </div>
-  <div class="contact">
-    <div class="contact-info">
-      <h1 class="title">Contact Us</h1>
-      <div class="group-info">
-        <h3 class="lead">Email</h3>
-        <p class="lead info-small"><a href="mailto:codesbyshadaine@gmail.com">Codesbyshadaine@gmail.com</a></p>
-      </div>
-      <div class="group-info">
-        <h3 class="lead">Form</h3>
-        <p class="lead info-small"><a href="contact.html">Suggestions and Feedback</a></p>
-      </div>
-      <div class="group-info">
-        <h3 class="lead">Social Media</h3>
-        <ul class="social-list">
-          <li><a href="https://www.instagram.com/tamoiblack/" target="blank"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="https://twitter.com/tamoiblack" target="blank"></a><i class="fab fa-twitter"></i></li>
-          <li><a href="https://github.com/Tamoiblack1" target="blank"><i class="fab fab fa-github-alt"></i></a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
+
   <div class="top" id="top"><a href="#"><i class="fas fa-arrow-up"></i></a></div>
   <footer class="footer" id="footer">
     <p class="unselectable">&copy; Code by Shadaine 2021</p>
